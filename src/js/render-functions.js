@@ -34,18 +34,18 @@ export function renderImages(images) {
   const markup = imagesTemplate(images);
   document.querySelector('.gallery').insertAdjacentHTML('beforeend', markup);
   lightbox.refresh();
+    
 }
 
 export function smoothScroll(page) {
-   if (page === 1) {
+  if (page === 1) {
       return;
-   }
-
-   const galleryChildsList = document.querySelectorAll('.gallery-item');
-   const { height: cardHeight } = galleryChildsList[galleryChildsList.length - 1].getBoundingClientRect();
-
-   window.scrollBy({
-      top: cardHeight * 2,
+  }
+  const galleryChildsList = document.querySelectorAll('.gallery-item');
+  const { height: cardHeight } = galleryChildsList[galleryChildsList.length - 1].getBoundingClientRect();
+  
+  window.scrollBy({
+      top: cardHeight * 2,//лучше 3.5
       behavior: "smooth",
-   });
+  });
 }
