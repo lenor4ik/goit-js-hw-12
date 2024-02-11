@@ -13,7 +13,7 @@
         <label>
           <input
             class="text-form"
-            type="name"
+            type="text"
             name="name"
             autofocus
             placeholder="Search images..."
@@ -21,9 +21,11 @@
         </label>
         <button class="searchBtn" type="submit">Search</button>
       </form>
-      <span class="loader" id="loader"></span>
+
       <ul class="gallery"></ul>
     </section>
+    <button type="submit" class="loadBtn hidden">Load more</button>
+    <span class="loader hidden" id="loader"></span>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
